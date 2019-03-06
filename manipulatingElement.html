@@ -2,23 +2,71 @@
 <head>
   <title>Manipulating Elements</title>
 
+  <style>
+    img{
+      width:500px;
+      height:500px;
+    }
+
+    #myStyle{
+      color:blue;
+    }
+
+    #myStyle2{
+      color:green;
+    }
+  </style>
 </head>
 
 <body>
 
-  <p id='changeme'>Click the button below</p>
-  <button id='button1' onclick = buttonOnClick()>Click Me!</button>
+  <!-- --- TASK 1 --- -->
+
+  <!-- <p id='changeme'>Click the button below</p>
+  <button id='button1' onclick = buttonOnClick()>Click Me!</button> -->
+
+  <!-- --- TASK 2 --- -->
+
+  <!-- <img src='image1.jpg' id='image' alt = 'image'>
+  <button id='button2' onclick = imageOnClick()>Change that Image</button> -->
+
+  <!-- --- TASK 3 --- -->
+
+  <!-- <h2 id = 'myStyle'>This will change color!</h2>
+  <button onclick = cssOnClick()>Change that color</button> -->
+
+  <!-- --- TASK 4 --- -->
+
+  <!-- <h3 id = 'myStyle2'>This will change!</h3>
+  <button onclick = allOnClick()>Change everything!</button> -->
 
   <script>
 
+    // --- TASK 1 ---
+
     function buttonOnClick() {
       document.getElementById('changeme').innerHTML = "I have evolved.";
-
-
-
     }
 
 
+    // --- TASK 2 ---
+
+    function imageOnClick() {
+      document.getElementById('image').src = "image2.jpeg";
+    }
+
+    // --- TASK 3 ---
+
+    function cssOnClick() {
+      document.getElementById('myStyle').style.color="red";
+    }
+
+    // --- TASK 4 ---
+
+    function allOnClick() {
+      document.getElementById('myStyle2').style.color="blue";
+      document.getElementById('myStyle2').style.fontSize="28px";
+    }
 
   </script>
 
