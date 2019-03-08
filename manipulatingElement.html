@@ -25,10 +25,11 @@
   <!-- <p id='changeme'>Click the button below</p>
   <button id='button1' onclick = buttonOnClick()>Click Me!</button> -->
 
-  <!-- --- TASK 2 --- -->
+  <!-- --- TASK 2 (EXTENDED) --- -->
 
   <!-- <img src='image1.jpg' id='image' alt = 'image'>
-  <button id='button2' onclick = imageOnClick()>Change that Image</button> -->
+  <button id='button2' onclick = imageOnClick()>Change that Image</button>
+  <button id='button3' onclick = reverseImage()>Change it back!</button> -->
 
   <!-- --- TASK 3 --- -->
 
@@ -40,6 +41,21 @@
   <!-- <h3 id = 'myStyle2'>This will change!</h3>
   <button onclick = allOnClick()>Change everything!</button> -->
 
+  <!-- --- TASK 5 --- -->
+
+  <!-- <input type="text" id="number1" name="number1"></input>
+  <input type="text" id="number2" name="number2"></input>
+
+  <button onclick = displayResult()>Calculate</button>
+  <h2 id="resultbox" name="result">Result</h2> -->
+
+  <!-- --- TASK 6 --- -->
+
+  <!--<input type="text" id="lessThan10" name="Check Number"></input>
+  <button onclick = ifLessThan()>Check if less than 10></button>-->
+
+
+
   <script>
 
     // --- TASK 1 ---
@@ -48,11 +64,14 @@
       document.getElementById('changeme').innerHTML = "I have evolved.";
     }
 
-
-    // --- TASK 2 ---
+    // --- TASK 2 (EXTENDED) ---
 
     function imageOnClick() {
       document.getElementById('image').src = "image2.jpeg";
+    }
+
+    function reverseImage() {
+      document.getElementById('image').src = "image1.jpeg"
     }
 
     // --- TASK 3 ---
@@ -68,7 +87,28 @@
       document.getElementById('myStyle2').style.fontSize="28px";
     }
 
-  </script>
+    // --- TASK 5 ---
 
+    function displayResult() {
+      document.getElementById("resultbox").innerHTML = String(parseInt(document.getElementById('number2').value) + parseInt(document.getElementById('number1').value));
+    }
+
+    // --- TASK 6 ---
+
+    function ifLessThan() {
+      if (document.getElementById("lessThan10").innerHTML < 10);
+      var answer = document.createElement("p");
+      var text = document.createTextNode("This is less than 10")
+      answer.appendChild(text);
+      document.body.appendChild(answer);
+
+      else;
+      var wrong = document.createElement("p");
+      var text1 = document.createTextNode("This is NOT less than 10")
+      answer.appendChild(text1);
+      document.body.appendChild(wrong);
+    }
+
+  </script>
 
 </body>
